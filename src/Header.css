@@ -10,7 +10,7 @@
   width: 100%;
   flex-wrap: wrap;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .header__left {
@@ -142,4 +142,17 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.datepicker__container {
+  position: absolute;
+  top: 120px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  width: max-content;
+  min-width: 700px;
 }

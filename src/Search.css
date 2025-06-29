@@ -1,42 +1,72 @@
-.search{
-    position: absolute;
-    top: 35px;
-    left: 25%;
-    width: 100vw;
+.datepicker__container {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  min-width: 550px;
+  max-width: 90vw;
 }
-.search > h2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 559px;
-    padding: 10px;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    top: 380px;
+
+.datepicker__tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
 }
-.search > input {
-    width: 539px;
-    padding: 20px;
-    position: absolute;
-    left: 0;
-    height: 30px;
-    top: 420px;
-    border: none;
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background-color: #f1f1f1;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-.search > input:focus {
-    outline-width: 0;
+
+.tab.active {
+  background-color: #e8e8e8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.search > button {
-    position: absolute;
-    left: 0;
-    top: 480px;
-    text-transform: inherit!important;
-    background-color: #ff7779;
-    color: white;
-    width: 579px;   
+
+/* .guest__label {
+  margin-top: 24px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-.search > button:hover {
-    background-color: white;
-    color:#ff7779;
+
+.guest__input {
+  width: 80px;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+} */
+
+.flexible-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.flexible-options button {
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.flexible-options button:hover {
+  background-color: #f7f7f7;
 }

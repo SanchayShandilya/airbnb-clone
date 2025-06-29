@@ -1,0 +1,62 @@
+.guest-selector {
+  background: white;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  font-family: 'Arial', sans-serif;
+}
+
+.guest-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.guest-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #222;
+}
+
+.desc {
+  font-size: 13px;
+  color: #717171;
+}
+
+.guest-counter {
+  display: flex;
+  align-items: center;
+}
+
+.guest-counter button {
+  background: #ebebeb;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.guest-counter button:hover {
+  background: #d8d8d8;
+}
+
+.guest-counter span {
+  margin: 0 12px;
+  font-size: 16px;
+  min-width: 16px;
+  display: inline-block;
+  text-align: center;
+}
