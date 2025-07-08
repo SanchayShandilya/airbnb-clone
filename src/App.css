@@ -1,0 +1,15 @@
+.mobile-nav-wrapper {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-nav-wrapper {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+    border-top: 1px solid #ddd;
+  }
+}

@@ -2,14 +2,17 @@ import React, { useState } from 'react'
 import './Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Avatar from '@mui/material/Avatar';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import Avatar from '@mui/material/Avatar';
 import { Link } from "react-router-dom"
 import VillaIcon from '@mui/icons-material/Villa';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import Search from './Search';
 import GuestSelector from './guestSelector';
+import MenuIcon from '@mui/icons-material/Menu';
+
 
 function formatDate(date) {
   return date.toLocaleDateString("en-GB", { day: 'numeric', month: 'short' });
@@ -23,6 +26,8 @@ function Header() {
   const [checkOutDate, setCheckOutDate] = useState(null);
   const [dateFlexibility, setDateFlexibility] = useState("Exact dates");
   const [isSelectingCheckIn, setIsSelectingCheckIn] = useState(true);
+  const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <div className='header'>
       <div className='header__left'>
@@ -97,9 +102,49 @@ function Header() {
       <div className='header__right'>
         <p>Become a host</p>
         <LanguageIcon />
-        <ExpandMoreIcon />
-        <Avatar />
+        {/* <ExpandMoreIcon /> */}
+        {/* <Avatar /> */}
+        <MenuIcon onClick={() => setShowDropdown(!showDropdown)} style={{ cursor: 'pointer' }} />
       </div>
+      <div className="header__mobile">
+        <div className="mobile__searchBar">
+          <SearchIcon />
+          <span>Start your search</span>
+        </div>
+
+        <div className="mobile__navIcons">
+          <div className="mobile__navItem active">
+            <VillaIcon className="mobile__icon" />
+            <span>Homes</span>
+          </div>
+          <div className="mobile__navItem">
+            <EmojiEmotionsIcon className="mobile__icon" />
+            <span>Experiences <sup className="new">NEW</sup></span>
+          </div>
+          <div className="mobile__navItem">
+            <RoomServiceIcon className="mobile__icon" />
+            <span>Services <sup className="new">NEW</sup></span>
+          </div>
+        </div>
+      </div>
+
+      {showDropdown && (
+        <div className='dropdown__menu'>
+          <div className='dropdown__item'><strong>Help Centre</strong></div>
+          <hr />
+          <div className='dropdown__item'>
+            <strong>Become a host</strong>
+            <div style={{ fontSize: '12px' }}>It’s easy to start hosting and earn extra income.</div>
+          </div>
+          <hr />
+          <div className='dropdown__item'>Refer a host</div>
+          <div className='dropdown__item'>Find a co-host</div>
+          <hr />
+          <div className='dropdown__item'>Log in or sign up</div>
+        </div>
+      )}
+
+
     </div>
 
   )

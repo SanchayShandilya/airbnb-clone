@@ -1,4 +1,22 @@
-.home__section{
-    display: flex;
-    padding:30px;
+.home__section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .home__section {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 240px;
+    height: 240px;
+  }
 }
