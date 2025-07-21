@@ -1,6 +1,6 @@
 .footerLinks {
   background-color: #f7f7f7;
-  padding: 40px 60px;
+  padding: 20px 30px;
   font-family: sans-serif;
   font-size: 14px;
 }
@@ -97,6 +97,9 @@
 
   .footerLinks__info div {
     margin-bottom: 24px;
+  }
+  .footerLinks__grid  {
+    margin-left: 0px;
   }
 }
 
