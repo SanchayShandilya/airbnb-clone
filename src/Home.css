@@ -1,8 +1,25 @@
 .home__section {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin-left: 20px;
   padding: 30px;
   gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.home__section::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
 }
 
 @media (max-width: 768px) {
