@@ -6,7 +6,6 @@ function FooterLinks() {
     <div className="footerLinks">
       <div className="footerLinks__tabs">
         <span className="activeTab">Unique stays</span>
-        <span>Categories</span>
       </div>
 
       <div className="footerLinks__grid">

@@ -90,6 +90,24 @@
 }
 
 @media (max-width: 768px) {
+  .footerLinks__grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .footerLinks__grid > div {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .footerLinks__grid::-webkit-scrollbar {
+    display: none;
+  }
   .footerLinks__info {
     grid-template-columns: 1fr;
     padding-left: 0;
