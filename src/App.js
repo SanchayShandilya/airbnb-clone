@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
+import Experience from './Experience';
 import Home from './Home'
 import Header from './Header'
 import Footer from './Footer'
@@ -40,6 +41,7 @@ function App() {
 
         <Routes>
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/" element={<Home />} />
         </Routes>
         <FooterLinks />

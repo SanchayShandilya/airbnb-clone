@@ -13,6 +13,18 @@
   overflow: visible;
 }
 
+.link {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+}
+
+.link.active {
+  border-bottom: 2px solid black;
+  font-weight: bold;
+}
+
+
 .header__left {
   flex: 1;
   min-width: 100px;

@@ -5,6 +5,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import Avatar from '@mui/material/Avatar';
 import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 import VillaIcon from '@mui/icons-material/Villa';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
@@ -38,13 +39,24 @@ function Header() {
 
       <div className='header__centerBox'>
         <div className='header__nav'>
-          <div className='nav__item nav__active'>
+          <div className='nav__item'>
             <VillaIcon className='nav__icon' />
-            Homes
+            <NavLink
+              className={({ isActive }) => isActive ? "link active" : "link"}
+              to="/"
+            >
+              Homes
+            </NavLink>
           </div>
           <div className='nav__item'>
             <Diversity1Icon className='nav__icon' />
-            Experiences <sup className='new'>NEW</sup>
+            <NavLink
+              className={({ isActive }) => isActive ? "link active" : "link"}
+              to="/experience"
+            >
+              Experiences
+            </NavLink>
+            <sup className='new'>NEW</sup>
           </div>
           <div className='nav__item'>
             <RoomServiceIcon className='nav__icon' />
