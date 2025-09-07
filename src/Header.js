@@ -125,14 +125,20 @@ function Header() {
         </div>
 
         <div className="mobile__navIcons">
-          <div className="mobile__navItem active">
+          <NavLink
+            to="/"
+            className={({ isActive }) => isActive ? "mobile__navItem active" : "mobile__navItem"}
+          >
             <VillaIcon className="mobile__icon" />
             <span>Homes</span>
-          </div>
-          <div className="mobile__navItem">
+          </NavLink>
+          <NavLink
+            to="/experience"
+            className={({ isActive }) => isActive ? "mobile__navItem active" : "mobile__navItem"}
+          >
             <EmojiEmotionsIcon className="mobile__icon" />
             <span>Experiences <sup className="new">NEW</sup></span>
-          </div>
+          </NavLink>
           <div className="mobile__navItem">
             <RoomServiceIcon className="mobile__icon" />
             <span>Services <sup className="new">NEW</sup></span>
