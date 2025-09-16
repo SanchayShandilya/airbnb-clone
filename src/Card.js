@@ -2,12 +2,11 @@ import React from 'react'
 import './Card.css'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
-
 function Card({ src, title, description, price }) {
   return (
-    <div className='card'>
-      <div className="card__imageContainer">
-        <img src={src} alt="" />
+    <div className="cardWrapper">
+      <div className="card">
+        <img src={src} alt={title} />
         <FavoriteBorderIcon className="card__heartIcon" />
       </div>
 
@@ -16,8 +15,6 @@ function Card({ src, title, description, price }) {
         <h4>{description}</h4>
         <h3>{price}</h3>
       </div>
-
-
     </div>
   )
 }
